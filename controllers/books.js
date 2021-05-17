@@ -34,6 +34,7 @@ booksRouter.post("/", middleware.userExtractor, async (request, response) => {
     author: body.author,
     url: body.url,
     stars: body.stars | 0,
+    picture: body.picture,
     user: user.id,
   });
 
@@ -82,6 +83,7 @@ booksRouter.put("/:id", async (request, response) => {
     author: body.author,
     url: body.url,
     stars: body.stars,
+    picture: body.picture,
   };
 
   const updatedBook = await Book.findByIdAndUpdate(request.params.id, book, {

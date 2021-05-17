@@ -11,6 +11,12 @@ const userSchema = new mongoose.Schema({
       ref: "Blog",
     },
   ],
+  books: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Book",
+    },
+  ],
 });
 
 userSchema.set("toJSON", {
