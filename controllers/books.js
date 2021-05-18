@@ -36,6 +36,7 @@ booksRouter.post("/", middleware.userExtractor, async (request, response) => {
     stars: body.stars | 0,
     picture: body.picture,
     user: user.id,
+    date: body.date,
   });
 
   const savedBook = await book.save();
@@ -84,6 +85,7 @@ booksRouter.put("/:id", async (request, response) => {
     url: body.url,
     stars: body.stars,
     picture: body.picture,
+    date: body.date,
   };
 
   const updatedBook = await Book.findByIdAndUpdate(request.params.id, book, {

@@ -7,6 +7,7 @@ const bookSchema = new mongoose.Schema({
   picture: String,
   stars: Number,
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  date: { required: true },
 });
 
 bookSchema.set("toJSON", {
