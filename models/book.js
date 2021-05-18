@@ -6,8 +6,8 @@ const bookSchema = new mongoose.Schema({
   url: { type: String, required: true },
   picture: String,
   stars: Number,
+  date: String,
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
-  date: { required: true },
 });
 
 bookSchema.set("toJSON", {
