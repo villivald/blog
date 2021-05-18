@@ -6,7 +6,9 @@ const bookSchema = new mongoose.Schema({
   url: { type: String, required: true },
   picture: String,
   stars: Number,
-  date: String,
+  year: Number,
+  month: Number,
+  day: Number,
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 });
 
